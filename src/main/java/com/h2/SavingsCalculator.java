@@ -16,9 +16,12 @@ public class SavingsCalculator {
     }
     private float sumOfDebits(){
         float sum=0.0f;
-       // for(float f:credits){
-        //    sum=sum+f;
-      //  }
+        for(float f:credits){
+           sum=sum+f;
+        }
         return sum;
+    }
+    private static int remainingDaysInMonth(LocalDate date){
+        return -1;
     }
 }
