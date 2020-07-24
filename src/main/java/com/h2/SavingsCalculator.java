@@ -8,6 +8,17 @@ public class SavingsCalculator {
        this.debits=debits;
     }
     private float sumOfCredits(){
-        return 0.0f;
+        float sum=0.0f;
+        for(float f:credits){
+            sum=sum+f;
+        }
+        return sum;
+    }
+    private float sumOfDebits(){
+        float sum=0.0f;
+       // for(float f:credits){
+        //    sum=sum+f;
+      //  }
+        return sum;
     }
 }
