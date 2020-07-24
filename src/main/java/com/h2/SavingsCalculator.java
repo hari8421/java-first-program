@@ -4,8 +4,23 @@ import java.time.LocalDate;
 import java.time.YearMonth;
 
 public class SavingsCalculator {
-   private float[] credits;
+    private float[] credits;
     private float[] debits;
+    public static void main( String[] args )
+    {
+        String[] creditsAsString=args[0].split(",");
+        String[] debitsAsString=args[1].split(",");
+        float[] credits =new float[creditsAsString.length];
+        float[] debits  =new float[debitsAsString.length];
+        for(int i=0;i<creditsAsString.length;i++){
+            credits[i]=Float.parseFloat(creditsAsString[i]);
+        }
+        for(int i=0;i<debitsAsString.length;i++){
+            debits[i]=Float.parseFloat(debitsAsString[i]);
+        }
+        SavingsCalculator savingsCalculator=new SavingsCalculator(credits,debits);
+    }
+
     public SavingsCalculator(float[] credits,float[] debits){
        this.credits=credits;
        this.debits=debits;
@@ -31,6 +46,6 @@ public class SavingsCalculator {
         return  remainingDays;
     }
     public float calculate(){
-return 0;
+return sumOfCredits()-sumOfDebits();
     }
 }
