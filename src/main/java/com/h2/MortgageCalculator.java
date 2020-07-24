@@ -11,6 +11,7 @@ public class MortgageCalculator {
     public static void main( String[] args )
     {
         MortgageCalculator calculator=new MortgageCalculator(Long.parseLong(args[0]),Integer.parseInt(args[1]),Float.parseFloat(args[2]));
+        calculator.calculateMonthlyPayment();
         System.out.println(calculator.toString());
     }
     public MortgageCalculator(long loanAmount,int termInYears,float annualRate ){
