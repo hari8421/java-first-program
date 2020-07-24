@@ -8,8 +8,7 @@ public class BestLoanRates {
     public static final Map<Integer, Float> bestRates=Map.of(1, 5.50f, 2, 3.45f, 3, 2.67f);
 
     public static void main( String[] args )
-    {
-        float errorRange=0.000001f;
+    { float errorRange=0.000001f;
        Scanner scanner=new Scanner(System.in);
        System.out.println("Enter your name");
        String name=scanner.nextLine();
