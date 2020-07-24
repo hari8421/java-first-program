@@ -19,6 +19,8 @@ public class SavingsCalculator {
             debits[i]=Float.parseFloat(debitsAsString[i]);
         }
         SavingsCalculator savingsCalculator=new SavingsCalculator(credits,debits);
+        float netSavings=savingsCalculator.calculate();
+        System.out.println("Net Savings = " +netSavings + ", remaining days in month = " + remainingDaysInMonth(LocalDate.now()));
     }
 
     public SavingsCalculator(float[] credits,float[] debits){
